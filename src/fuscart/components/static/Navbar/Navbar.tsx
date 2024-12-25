@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <Fragment>
       <div className="top">
-        <Header />
+        {/* <Header /> */}
         <Nav />
       </div>
     </Fragment>

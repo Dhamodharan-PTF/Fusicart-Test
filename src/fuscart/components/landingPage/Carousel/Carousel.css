@@ -1,12 +1,13 @@
 .carousel-container {
   position: relative;
   border-radius: 15px; /* Adds rounded corners */
-  overflow: visible; /* Ensures content stays within rounded edges */
+  overflow: visible; 
 }
 
 .carousel-slide{
   border-radius: 15px;
 }
+
 .custom-carousel .carousel .slide {
   transition: opacity 0.5s ease-in-out; /* Smooth fade-in animation */
 }
@@ -21,7 +22,6 @@
   justify-content: space-between;
   width: 100%;
   max-width: 6%;
-  
 }
 .dot-manage{
   display: flex;
@@ -53,4 +53,57 @@
 .dot:hover {
   background-color: #444;
   transform: scale(1.2); /* Enlarge on hover */
+}
+
+
+
+
+/* Responsive */
+
+@media screen and (min-width: 420px) {
+  .dot {
+    width: 10px;
+    height: 5px;
+  }
+  .carousel-dots {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    width: 100%;
+    max-width: 6%;
+  }
+  .dot.active {
+    background-color: #7EACB5;
+    transform: scale(1.2); /* Slightly enlarge the active dot */
+    border-radius: 12px; /* Make it a rounded rectangle */
+    width: 13px;
+    height: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .carousel-slide {
+    border-radius: 15px;
+    height: 18rem;
+  }
+  .carousel-slide img {
+    border-radius: 15px; 
+    height: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .carousel-slide {
+    border-radius: 15px;
+    height: 18rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .carousel-slide {
+    border-radius: 15px;
+    height: 17rem;
+  }
 }

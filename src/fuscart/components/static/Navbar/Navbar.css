@@ -6,7 +6,10 @@
 
 
 /* Header */
-
+.header {
+    display: grid;
+    gap: 0.5rem;
+}
 
 .top-header {
     font-family: var(--poppins-font);
@@ -41,181 +44,116 @@
     margin-top: 2px;
 }
 
+
 .header-bottom {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.Fuscart_logo {
-    height: 3rem;
-    width: 7rem;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.bottom-left {
-    display: flex;
     align-items: center;
-    gap: 0.7rem;
 }
 
-.location {
+.fuscart-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.brand-logo {
+    height: 46px;
+}
+
+.bottom-right {
+    height: 100%;
+    width: 30%;
+    gap: 2%;
     display: flex;
-    gap: 1%;
-    font-family: var(--righteous-font);
-    font-size: var(--font-14);
-    color: var(--black-Secondary);
+    justify-content: space-between;
+    align-items: center;
 }
 
-.search-bar {
-    display: flex;
-    border: 2px solid var(--primaryLight-color);
-    border-radius: 8px;
-    position: relative;
-    font-family: var(--poppins-font);
-    font-weight: var(--font-medium);
+.search-main {
+    width: 60%;
 }
-
-.search {
-    padding: 6px 10px;
-    margin-left: 5px;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    color: var(--primary-color);
-    transition: none;
-}
-
-.search:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.search::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.search::placeholder {
-    color: var(--primary-color);
-    font-family: var(--poppins-font);
-    font-size: var(--font-12);
-    font-weight: var(--font-medium);
-}
-
-.search_icon {
-    position: relative;
-    right: 10px;
-    top: 6px;
-    height: 14px;
-    width: 15px;
-}
-
-.wishlist,
-.cart,
-.profile,
-.menu {
-    border: 2px solid var(--primaryLight-color);
-    border-radius: 8px;
-    height: 2rem;
-    width: 2.2rem;
+.nav-main {
+    margin-top: 3px;
+    padding: 6px;
+    border: #c968684e solid 3px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.nav-menu{
+    margin-top: 3px;
+    padding: 6px;
+    border: #c968684e solid 3px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.wishlist_icon {
-    margin-top: 22%;
+
+.nav-icons-top {
+    height: 16px;
+    width: 17px;
 }
 
-.cart_icon {
-    margin-top: 17%;
-}
+/* For mobile under 480px */
+@media screen and (max-width: 480px) {
 
-.profile_icon {
-    margin-top: 17%;
-}
-
-.menu_icon {
-    margin-top: 22%;
-}
-
-    @media (max-width: 768px) { /* For mobile screens */
-        .top-header {
-            font-size: 10px; /* Small, readable font size */
-            padding: 1% 2%; /* Compact padding for mobile */
-            width: 100%; /* Use full width of the screen */
-            margin: 0; /* Remove extra margins */
-            flex-direction: column; /* Stack items vertically */
-            align-items: flex-start; /* Align items to the left */
-            justify-content: flex-start; /* No extra spacing */
-            gap: 0.5rem; /* Minimal gap between elements */
-        }
-    
-        .left,
-        .right {
-            flex-direction: column; /* Stack elements */
-            width: 100%; /* Full width for mobile */
-            align-items: flex-start; /* Align to the left */
-            justify-content: flex-start; /* Minimize spacing */
-            gap: 0.5rem; /* Reduce gap for compactness */
-        }
-    
-        .top {
-            gap: 0.3rem; /* Reduce overall gap for compact layout */
-            width: 100%; /* Fit to screen width */
-        }
-    
-        .header-bottom {
-            flex-direction: column; /* Stack elements vertically */
-            width: 100%; /* Full width for mobile */
-            align-items: flex-start; /* Align to the left */
-            justify-content: flex-start; /* No extra spacing */
-            gap: 0.5rem; /* Add minimal spacing between elements */
-        }
-    
-        .top_icons {
-            margin: 0; /* Remove excess margins */
-        }
-    
-        .Fuscart_logo {
-            height: 2.5rem; /* Slightly smaller logo for mobile */
-            width: auto; /* Keep aspect ratio */
-        }
-    
-        .search-bar {
-            width: 100%; /* Full width for search bar */
-            padding: 0.5rem; /* Compact padding */
-            gap: 0.5rem; /* Reduce internal gaps */
-        }
-    
-        .search {
-            font-size: 12px; /* Adjust font size for better fit */
-            width: calc(100% - 2rem); /* Fit within search bar */
-        }
-    
-        .wishlist,
-        .cart,
-        .profile,
-        .menu {
-            height: 1.8rem; /* Compact icons */
-            width: 1.8rem;
-        }
-    
-        .wishlist_icon,
-        .cart_icon,
-        .profile_icon,
-        .menu_icon {
-            margin: 0; /* Remove unnecessary margin */
-            height: auto; /* Adjust size dynamically */
-            width: auto;
-        }
+    /* Adjust header-bottom for mobile view */
+    .header-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* Ensure it takes full width */
+        padding: 5px; /* Adjust padding for mobile */
     }
-    
+
+    /* Hide nav icons */
+    .nav-main {
+        display: none;
+    }
+
+    /* Keep the logo visible and adjust its size */
+    .brand-logo img {
+        width: 100px; /* Adjust logo size for mobile */
+        height: auto;
+    }
+
+    /* Adjust search to fit smaller screen */
+    .search-main {
+        width: 60%; /* Adjust search width for mobile */
+    }
+
+    /* Hide other nav items like Wishlist, Cart, Profile */
+    .nav-menu {
+        margin-left: auto; /* Align menu to the right */
+    }
+
+    /* Optionally, you may want to adjust the menu icon size */
+    .nav-icons-top {
+        height: 18px;
+        width: 18px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .top-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        font-size: var(--font-12);
+    }
+    .header{
+        gap: 0.1rem;
+    }
+}
 
 
 /* Header end */
@@ -226,7 +164,6 @@
 
 
 .nav_icon {
-    margin-top: 2%;
     height: 14px;
     width: 15px;
 }
@@ -252,8 +189,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 5%;
     border-radius: 0.3rem;
-    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+    transition: background-color 0.3s ease-in-out;
+    /* Smooth background color transition */
 }
 
 .nav_link {
@@ -264,10 +203,72 @@
 }
 
 .nav_item:hover {
-    background-color: var(--secondary-color); 
+    background-color: var(--secondary-color);
 }
 
 
 .nav_item:hover .nav_link {
     color: var(--tertiary-color);
 }
+
+
+.dropdown-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999; 
+  }
+  
+  .dropdown-container {
+    position: absolute;
+    top: 100px;
+    right: 3%;
+    width: 200px;
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
+    z-index: 1000; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  
+  .dropdown-container ul {
+    padding: 0;
+    margin: 0;
+    gap: 1%;
+    list-style: none;
+    font-family: var(--righteous-font);
+    
+  }
+  .dropdown-container ul li{
+    text-align: center;
+    padding: 6px 0;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropdown-container ul li:hover{
+    color: var(--white);
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+  }
+
+  
+@media screen and (max-width: 480px) {
+    .dropdown-overlay {
+      background-color: rgba(46, 46, 46, 0.7); /* Black background with opacity */
+    }
+    .dropdown-container {
+        position: absolute;
+        top: 6%;
+        right: 3%;
+      }
+    .nav{
+        display: none;
+    }
+  }
+  
+
+  

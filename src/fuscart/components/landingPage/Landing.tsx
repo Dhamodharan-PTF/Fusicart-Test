@@ -14,7 +14,7 @@ const Landing = () => {
       <SpecialNav />
       <ProductCard />
       <TopChoices/>
-      <div className="" style={{height:'300px'}}></div>
+      <div className="" style={{height:'10rem'}}></div>
     </Fragment>
   )
 }

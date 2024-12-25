@@ -55,3 +55,66 @@
 .special-nav_icon:hover {
     transform: rotate(360deg); /* Rotate icon on hover */
 }
+/* For screen widths 420px or smaller */
+@media screen and (max-width: 420px) {
+    .special-nav{
+        padding: 0%;
+    }
+    .special-nav_icon {
+        height: 16px;
+        width: 16px;
+        transition: transform 0.3s ease-in-out; /* Smooth transform effect */
+    }
+    .special-navbar {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: space-between; /* Distribute items across the space */
+        gap: 0.4rem; /* Adjust the gap between items */
+    }
+
+    .special-nav_item {
+        width: calc(50% - 0.5rem); /* Set width to 50% minus half of the gap for spacing */
+        height: auto; /* Adjust height automatically */
+        text-align: center;
+        height: 2rem;
+    }
+
+    .special-nav_link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: var(--font-12); /* You can reduce the font size for smaller screens */
+    }
+}
+@media screen and (max-width: 480px) {
+    .special-nav{
+        padding: 0%;
+    }
+    .special-nav_icon {
+        height: 16px;
+        width: 16px;
+        transition: transform 0.3s ease-in-out; /* Smooth transform effect */
+    }
+    .special-navbar {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: space-between; /* Distribute items across the space */
+        gap: 0.4rem; /* Adjust the gap between items */
+    }
+
+    .special-nav_item {
+        width: calc(50% - 0.5rem); /* Set width to 50% minus half of the gap for spacing */
+        height: auto; /* Adjust height automatically */
+        text-align: center;
+        height: 2rem;
+    }
+
+    .special-nav_link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: var(--font-12); /* You can reduce the font size for smaller screens */
+    }
+}

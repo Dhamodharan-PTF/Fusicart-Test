@@ -59,7 +59,7 @@ const TopChoices = () => {
             <div className="topChoice-section">
               <div className="topChoices-section-top">
                 <div className="topChoices-icon-section">
-                  <img src={Birthday_Icon} alt="Birthday Icon" className='topChoices-icon-image' />
+                  <img src={Flowers_Icon} alt="Birthday Icon" className='topChoices-icon-image' />
                 </div>
                 <div className="topChoices-section-sub">
                   <div className="sub-top-title">Birthday</div>

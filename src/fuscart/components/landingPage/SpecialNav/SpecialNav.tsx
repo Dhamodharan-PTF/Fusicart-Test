@@ -14,7 +14,7 @@ const Categories: React.FC = () => {
           <li key={index} className='special-nav_item'>
             <a href={SpecialLink.to} className='special-nav_link'>
               <img src={SpecialLink.icon} alt={`${SpecialLink.label} icon`} className='special-nav_icon'/> {/* Display icon */}
-              {SpecialLink.label} {/* Display label */}
+              <div className='special-nav-text'>{SpecialLink.label}</div>
             </a>
           </li>
         ))}
