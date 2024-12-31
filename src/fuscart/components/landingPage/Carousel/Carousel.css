@@ -1,0 +1,109 @@
+.carousel-container {
+  position: relative;
+  border-radius: 15px; /* Adds rounded corners */
+  overflow: visible; 
+}
+
+.carousel-slide{
+  border-radius: 15px;
+}
+
+.custom-carousel .carousel .slide {
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+.carousel-slide img {
+  border-radius: 15px; 
+}
+
+/* Style the custom dots container */
+.carousel-dots {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 6%;
+}
+.dot-manage{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Space between carousel and dots */
+  position: relative;
+  top: 3px; /* Move dots slightly outside the carousel */
+}
+.dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  /* margin: 0 8px; */
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Style for the active dot */
+.dot.active {
+  background-color: #7EACB5;
+  transform: scale(1.2); /* Slightly enlarge the active dot */
+  border-radius: 12px; /* Make it a rounded rectangle */
+  width: 0.8rem; /* Adjust width to create a rectangular shape */
+  height: 0.6rem; /* Adjust height to create a rectangular shape */
+}
+
+
+/* Hover effect for dots */
+.dot:hover {
+  background-color: #444;
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+
+
+
+/* Responsive */
+
+@media screen and (min-width: 420px) {
+  .dot {
+    width: 10px;
+    height: 5px;
+  }
+  .carousel-dots {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    width: 100%;
+    max-width: 6%;
+  }
+  .dot.active {
+    background-color: #7EACB5;
+    transform: scale(1.2); /* Slightly enlarge the active dot */
+    border-radius: 12px; /* Make it a rounded rectangle */
+    width: 13px;
+    height: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .carousel-slide {
+    border-radius: 15px;
+    height: 18rem;
+  }
+  .carousel-slide img {
+    border-radius: 15px; 
+    height: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .carousel-slide {
+    border-radius: 15px;
+    height: 18rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .carousel-slide {
+    border-radius: 15px;
+    height: 17rem;
+  }
+}
