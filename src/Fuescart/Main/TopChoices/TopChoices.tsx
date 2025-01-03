@@ -62,7 +62,7 @@ const TopChoices = () => {
                   <img src={Flowers_Icon} alt="Birthday Icon" className='topChoices-icon-image' />
                 </div>
                 <div className="topChoices-section-sub">
-                  <div className="sub-top-title">Birthday</div>
+                  <div className="sub-top-title">Flowers</div>
                   <div className="sub-top-offer">45% Offer</div>
                 </div>
               </div>
@@ -97,10 +97,10 @@ const TopChoices = () => {
             <div className="topChoice-section">
               <div className="topChoices-section-top">
                 <div className="topChoices-icon-section">
-                  <img src={Birthday_Icon} alt="Birthday Icon" className='topChoices-icon-image' />
+                  <img src={Relations_Icon} alt="Birthday Icon" className='topChoices-icon-image' />
                 </div>
                 <div className="topChoices-section-sub">
-                  <div className="sub-top-title">Birthday</div>
+                  <div className="sub-top-title">Relations</div>
                   <div className="sub-top-offer">45% Offer</div>
                 </div>
               </div>
@@ -133,10 +133,10 @@ const TopChoices = () => {
             <div className="topChoice-section">
               <div className="topChoices-section-top">
                 <div className="topChoices-icon-section">
-                  <img src={Birthday_Icon} alt="Birthday Icon" className='topChoices-icon-image' />
+                  <img src={Cakes_Icon} alt="Birthday Icon" className='topChoices-icon-image' />
                 </div>
                 <div className="topChoices-section-sub">
-                  <div className="sub-top-title">Birthday</div>
+                  <div className="sub-top-title">Cakes</div>
                   <div className="sub-top-offer">45% Offer</div>
                 </div>
               </div>

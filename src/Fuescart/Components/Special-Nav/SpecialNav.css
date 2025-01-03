@@ -1,5 +1,4 @@
 .special-nav_icon {
-    
     height: 24px;
     width: 24px;
     transition: transform 0.3s ease-in-out; /* Smooth transform effect */
@@ -116,5 +115,15 @@
         align-items: center;
         gap: 0.4rem;
         font-size: var(--font-12); /* You can reduce the font size for smaller screens */
+    }
+}
+@media screen and (min-width:2560px) {
+    .special-nav_icon {
+        height: 30px;
+        width: 30px;
+        transition: transform 0.3s ease-in-out; /* Smooth transform effect */
+    }
+    .special-nav_link{
+        font-size: var(--font-22);
     }
 }

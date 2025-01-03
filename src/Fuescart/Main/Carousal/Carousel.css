@@ -73,4 +73,17 @@
       height: 0.6rem;
     }
   }
+  @media only screen and (min-width: 2560px) {
+    .dot, .dot.active {
+      width: 0.6rem; /* Same size on all devices */
+      height: 0.6rem;
+    }
+    .carousel{
+      height: 13rem;
+      width: 100%;
+    }
+    .carousel-slider{
+      height: 100%;
+    }
+  }
   

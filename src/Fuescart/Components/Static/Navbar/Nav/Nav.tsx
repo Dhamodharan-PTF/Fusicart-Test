@@ -129,6 +129,7 @@ const Nav = () => {
               </div>
               {isMenuOpen && (
                 <div className="dropdown-container">
+                  <div className='Fuscart-menu'>Fuescart menu</div>
                   {renderDropdownMenu()}
                 </div>
               )}

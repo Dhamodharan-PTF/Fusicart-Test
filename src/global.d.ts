@@ -24,4 +24,12 @@ declare module '*.svg' {
     const content: string;
     export default content;
   }
-  
+  declare module '@heroicons/react/solid' {
+    export * from 'react';
+  }
+  declare module '@heroicons/react/outline' {
+    export * from 'react';
+  }
+  declare module '@heroicons/react/20/solid' {
+    export * from 'react';
+  }

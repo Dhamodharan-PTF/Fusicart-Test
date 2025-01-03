@@ -172,14 +172,15 @@
   
   @media screen and (max-width:480px) {
     .topChoices-title-head {
-      font-size: var(--font-14);
+      font-size: var(--font-16);
     }
     .topChoices-title-sub{
-      font-size: var(--font-10);
+      font-size: var(--font-12);
     }
     .topChoices-main {
       display: flex;
       flex-direction: column;
+      height: 100%;
     }
     .topChoices-ad {
       height: 12rem;

@@ -250,6 +250,16 @@
     font-size: var(--font-14) !important;
     font-weight: var(--font-medium) !important;
 }
+.Fuscart-menu{
+    font-family: var(--righteous-font);
+    width: 100%;
+    text-align: center;
+    color: var(--secondary-color);
+    background-color: var(--white);
+    display: grid;
+    align-items: center;
+    padding: 4% 0%;
+}
 
 @media screen and (max-width: 480px) {
     .dropdown-overlay {
@@ -306,4 +316,40 @@
     font-size: 14px;
     flex: 1;
     width: 100%;
+}
+@media screen and (min-width: 2560px) {
+    .top-header{
+        font-size: var(--font-16);
+    }
+    .header{
+        gap: 1rem;
+    }
+    .bottom-right {
+        width: 24%;
+    }
+    .dropdown-container {
+        position: absolute !important;
+        top: 130px !important;
+        right: 3% !important;
+        width: 240px !important;
+    }
+    .dropdown-container ul li a {
+        text-decoration: none !important;
+        color: var(--primary-color) !important;
+        font-size: var(--font-20) !important;
+        font-weight: var(--font-medium) !important;
+    }
+    .dropdown-container ul li img {
+        width: 20px !important;
+        height: 20px !important;
+        object-fit: contain !important;
+        margin-right: 10px !important;
+    }
+    .nav_icon {
+        height: 21px;
+        width: 22px;
+    }
+ .nav_link{
+    font-size: var(--font-22);
+}
 }
