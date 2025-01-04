@@ -242,4 +242,10 @@
       font-size: var(--font-8);
       margin-top: 2px;
     }
+    .topChoice-nav-text{
+      font-size: var(--font-18);
+    }
+    .showMore-btn{
+      font-size: var(--font-16);
+    }
   }

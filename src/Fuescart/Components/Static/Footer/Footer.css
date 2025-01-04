@@ -161,13 +161,16 @@
     .footer-left {
         width: 100%;
         display: grid;
+        justify-content: center;
         gap: 1rem;
     }
     .footer-logo-container {
-        text-align: center;
-        height: 2.5rem;
+        display: grid;
+        justify-content: center;
+        height: 3rem;
+        width: 100%;
     }
-    .footer-logo {
+    .fuscart-logo{
         width: 50%;
         margin: 0 auto;
     }
@@ -202,9 +205,11 @@
     .footer-conainer-title {
         font-size: var(--font-16);
         color: var(--tertiary-color);
+        text-align: center;
     }
     .footer-nav {
         display: grid;
+        text-align: center;
         gap: 0.5rem;
     }
     .footer-nav-link {
@@ -217,5 +222,12 @@
         font-size: var(--font-12);
         text-align: center;
         margin-top: 1rem;
+    }
+    .footer-right-top, .footer-right-bottom{
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 4%;
     }
 }

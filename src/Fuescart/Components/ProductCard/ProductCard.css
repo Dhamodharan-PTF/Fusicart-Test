@@ -102,6 +102,12 @@
     max-width:12rem; /* Ensure cards don’t exceed the available width */
   
   }
+  
+  .product-card-container:focus {
+    outline: none; /* Remove default browser focus outline */
+    box-shadow: none; /* Remove any box-shadow if present */
+  }
+  
   .product-image-container {
     height: 100%;
     width: 100%;
@@ -139,7 +145,7 @@
   }
   
   .product-card-wishlist.active {
-    background-color: var(--primary-color);
+    background-color: var(--white);
   }
   
   
@@ -361,7 +367,6 @@
     .Wishlist-icon-product{
       width: 10px; /* Adjust wishlist icon size */
       height: 10px;
-      border-radius: 10px;
     }
     .price-tag {
       font-size: var(--font-10);

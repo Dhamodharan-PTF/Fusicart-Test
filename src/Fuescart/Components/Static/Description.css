@@ -10,3 +10,18 @@
     justify-content: space-between;
     align-items: center;
 }
+@media screen and (max-width:480px) {
+    .Description{
+        background-color: var(--secondary-color);
+        font-family: var(--righteous-font);
+        font-size: var(--font-10);
+        text-transform: uppercase;
+        color: var(--white);
+        padding: 8px 1rem;
+        border-radius: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

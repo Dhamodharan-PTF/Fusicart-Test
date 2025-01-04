@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import product_card from '../../Assets/Rough/3.jpg';
 import Rating_star from '../../Assets/Star.png';
 import Wishlist from '../../Assets/Wishlist.png';
@@ -33,10 +34,24 @@ const ProductCard: React.FC = () => {
     setProductData((prevData) =>
       prevData.map((product) =>
         product.fuscart_product_id === fuscart_product_id
-          ? { ...product, product_isWishlisted: !product.product_isWishlisted }
+          ? {
+              ...product,
+              product_isWishlisted: !product.product_isWishlisted,
+            }
           : product
       )
     );
+
+    const product = productData.find(
+      (item) => item.fuscart_product_id === fuscart_product_id
+    );
+
+    if (product) {
+      const message = product.product_isWishlisted
+        ? `${product.product_title} Surprise Unwrapped Early`
+        : `${product.product_title} Surprise in Store`;
+      toast(message);
+    }
   };
 
   // Handle swipe gestures for mobile
@@ -68,11 +83,14 @@ const ProductCard: React.FC = () => {
     }
   };
 
+
+  
+
   return (
     <div className="product-card">
       <div className="product-card-top">
         <div className="product-card-title">New Arrivals</div>
-        <Link to="/NewArrivals"className="product-card-viewall">View All</Link>
+        <Link to="/NewArrivals" className="product-card-viewall">View All</Link>
       </div>
       <div
         className="product-card-main"
@@ -89,20 +107,25 @@ const ProductCard: React.FC = () => {
 
         <div className="product-card-mapping">
           {productData.map((product) => (
-           <Link
-           to={`/${product.fuscart_product_id}/${encodeURIComponent(product.product_title)}`}
-           key={product.fuscart_product_id}
-           className="product-card-container"
-           style={{ textDecoration: 'none' }}
-         >
+            <Link
+              to={`/${product.fuscart_product_id}/${encodeURIComponent(product.product_title)}`}
+              key={product.fuscart_product_id}
+              className="product-card-container"
+              style={{ textDecoration: 'none' }}
+            >
               <div className="product-image-container">
                 <img src={product.product_image} alt={`Product ${product.fuscart_product_id}`} className="product-image" />
                 <div
                   className={`product-card-wishlist ${product.product_isWishlisted ? 'active' : ''}`}
-                  onClick={() => toggleWishlist(product.fuscart_product_id)}
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent link navigation
+                    e.stopPropagation(); // Stop event bubbling
+                    toggleWishlist(product.fuscart_product_id);
+                  }}
+                  tabIndex={-1} 
                 >
                   <img
-                    src={product.product_isWishlisted ? Wishlist_white : Wishlist}
+                    src={product.product_isWishlisted ? Wishlist : Wishlist_white}
                     alt="Wishlist Icon"
                     className="Wishlist-icon-product"
                   />
