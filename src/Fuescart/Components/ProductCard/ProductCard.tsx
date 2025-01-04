@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import product_card from '../../Assets/Rough/3.jpg';
 import Rating_star from '../../Assets/Star.png';
 import Wishlist from '../../Assets/Wishlist.png';
@@ -6,25 +7,33 @@ import Wishlist_white from '../../Assets/Wishlist-white.png';
 import './ProductCard.css';
 
 const ProductCard: React.FC = () => {
+
+  const navigate = useNavigate();
+
+  const handleCardClick = (id: number, title: string) => {
+    navigate(`/productDescription/${id}/${encodeURIComponent(title)}`);
+  };
+
+
   const products = Array.from({ length: 10 }, (_, i) => ({
-    id: i + 1,
-    title: `Product ${i + 1}`,
-    price: 1999 + i * 100,
-    originalPrice: 9000 - i * 100,
-    rating: 4.8,
-    reviews: 300 + i,
-    offer: 'Double',
-    image: product_card,
-    isWishlisted: false,
+    fuscart_product_id: i + 1,
+    product_title: `Product ${i + 1}`,
+    product_price: 1999 + i * 100,
+    product_originalPrice: 9000 - i * 100,
+    product_rating: 4.8,
+    product_reviews: 300 + i,
+    product_offer: 'Double',
+    product_image: product_card,
+    product_isWishlisted: false,
   }));
 
   const [productData, setProductData] = useState(products);
 
-  const toggleWishlist = (id: number) => {
+  const toggleWishlist = (fuscart_product_id: number) => {
     setProductData((prevData) =>
       prevData.map((product) =>
-        product.id === id
-          ? { ...product, isWishlisted: !product.isWishlisted }
+        product.fuscart_product_id === fuscart_product_id
+          ? { ...product, product_isWishlisted: !product.product_isWishlisted }
           : product
       )
     );
@@ -63,7 +72,7 @@ const ProductCard: React.FC = () => {
     <div className="product-card">
       <div className="product-card-top">
         <div className="product-card-title">New Arrivals</div>
-        <div className="product-card-viewall">View All</div>
+        <a href="/"className="product-card-viewall">View All</a>
       </div>
       <div
         className="product-card-main"
@@ -80,44 +89,49 @@ const ProductCard: React.FC = () => {
 
         <div className="product-card-mapping">
           {productData.map((product) => (
-            <div className="product-card-container" key={product.id}>
+           <Link
+           to={`/${product.fuscart_product_id}/${encodeURIComponent(product.product_title)}`}
+           key={product.fuscart_product_id}
+           className="product-card-container"
+           style={{ textDecoration: 'none' }}
+         >
               <div className="product-image-container">
-                <img src={product.image} alt={`Product ${product.id}`} className="product-image" />
+                <img src={product.product_image} alt={`Product ${product.fuscart_product_id}`} className="product-image" />
                 <div
-                  className={`product-card-wishlist ${product.isWishlisted ? 'active' : ''}`}
-                  onClick={() => toggleWishlist(product.id)}
+                  className={`product-card-wishlist ${product.product_isWishlisted ? 'active' : ''}`}
+                  onClick={() => toggleWishlist(product.fuscart_product_id)}
                 >
                   <img
-                    src={product.isWishlisted ? Wishlist_white : Wishlist}
+                    src={product.product_isWishlisted ? Wishlist_white : Wishlist}
                     alt="Wishlist Icon"
                     className="Wishlist-icon-product"
                   />
                 </div>
-                <div className="product-offer">{product.offer}</div>
+                <div className="product-offer">{product.product_offer}</div>
               </div>
               <div className="product-detail">
-                <div className="product-title">{product.title}</div>
+                <div className="product-title">{product.product_title}</div>
                 <div className="product-rating-offer">
                   <div className="product-rating">
                     <div className="rating-card">
                       <img src={Rating_star} alt="Rating Star" className="rating-star" />
-                      <div className="Rating-number">{product.rating}</div>
+                      <div className="Rating-number">{product.product_rating}</div>
                     </div>
-                    <div className="rating-numbers">({product.reviews})</div>
+                    <div className="rating-numbers">({product.product_reviews})</div>
                   </div>
                 </div>
                 <div className="product-price">
                   <div className="product-site-price">
                     <div className="price-tag">₹</div>
-                    {product.price}
+                    {product.product_price}
                   </div>
                   <div className="product-ori-price">
                     <div className="price-ori-tag">₹</div>
-                    {product.originalPrice}
+                    {product.product_originalPrice}
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

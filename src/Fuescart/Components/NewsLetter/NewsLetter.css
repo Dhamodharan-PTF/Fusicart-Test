@@ -73,8 +73,13 @@
     width: 25%;
     height: 100%;
     border: none;
-    box-shadow: 0px 2px 2px #bdb6b6;
     border-radius: 8px;
+}
+.NewsLetter-Btn:hover{
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0px 2px 2px #bdb6b6;
+    
 }
 @media screen and (max-width:480px) {
     .Newsletter{
@@ -125,6 +130,7 @@
   
     .Toastify__toast-container {
       width: 70% !important;
+      z-index: 9999;
       right: 10px !important; /* Align the container to the right */
       left: auto !important; /* Remove any left alignment */
     }

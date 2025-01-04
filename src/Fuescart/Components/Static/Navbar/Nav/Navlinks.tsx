@@ -10,37 +10,37 @@ import Themes_Icon from '../../../../Assets/Navicons/confetti.png';
 const Navlinks = [
     {
       label: 'Birthday',
-      to: '/birthday',
+      to: '/Birthday',
       icon: Birthday_Icon,
     },
     {
       label: 'Flowers',
-      to: '/flowers',
+      to: '/Flowers',
       icon:Flowers_Icon,
     },
     {
       label: 'Relations',
-      to: '/relations',
+      to: '/Relations',
       icon:Relations_Icon,
     },
     {
       label: 'Cakes',
-      to: '/cakes',
+      to: '/Cakes',
       icon:Cakes_Icon,
     },
     {
       label: 'Occasions',
-      to: '/occasions',
+      to: '/Occasions',
       icon:Occasions_Icon,
     },
     {
       label: 'Plants',
-      to: '/plants',
+      to: '/Plants',
       icon:Plants_Icon,
     },
     {
       label: 'Themes',
-      to: '/themes',
+      to: '/Themes',
       icon:Themes_Icon,
     },
   ];

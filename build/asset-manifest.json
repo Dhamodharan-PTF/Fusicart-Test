@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Fusicart-Test/static/css/main.987947c9.css",
-    "main.js": "/Fusicart-Test/static/js/main.a0513741.js",
+    "main.css": "/Fusicart-Test/static/css/main.220527d6.css",
+    "main.js": "/Fusicart-Test/static/js/main.19d6418e.js",
     "static/media/3.jpg": "/Fusicart-Test/static/media/3.a19b857efd4332f55249.jpg",
     "static/media/2.jpg": "/Fusicart-Test/static/media/2.3d80f7c750b27a643a5e.jpg",
     "static/media/1.png": "/Fusicart-Test/static/media/1.0a951638c5b713f070f9.png",
@@ -16,13 +16,14 @@
     "static/media/plant.png": "/Fusicart-Test/static/media/plant.26e7164aae28bd49106c.png",
     "static/media/badge.png": "/Fusicart-Test/static/media/badge.63a55f3ac8f8e6c2c037.png",
     "static/media/gift.png": "/Fusicart-Test/static/media/gift.e31e6d31c8ad7e22155d.png",
+    "static/media/Logo-white.png": "/Fusicart-Test/static/media/Logo-white.03b41d1e8717fdbf8b27.png",
     "static/media/festive.png": "/Fusicart-Test/static/media/festive.1776d43f6d1fe251c68a.png",
     "index.html": "/Fusicart-Test/index.html",
-    "main.987947c9.css.map": "/Fusicart-Test/static/css/main.987947c9.css.map",
-    "main.a0513741.js.map": "/Fusicart-Test/static/js/main.a0513741.js.map"
+    "main.220527d6.css.map": "/Fusicart-Test/static/css/main.220527d6.css.map",
+    "main.19d6418e.js.map": "/Fusicart-Test/static/js/main.19d6418e.js.map"
   },
   "entrypoints": [
-    "static/css/main.987947c9.css",
-    "static/js/main.a0513741.js"
+    "static/css/main.220527d6.css",
+    "static/js/main.19d6418e.js"
   ]
 }

@@ -6,17 +6,17 @@ import DealsIcon from '../../Assets/catagoriesicons/hot-deal.png';
 const SpecialLinks = [
     {
       label: 'New Arrivals',
-      to: '/birthday',
+      to: '/NewArrivals',
       icon: NewArrivalsIcon,
     },
     {
       label: 'Best Sellers',
-      to: '/flowers',
+      to: '/BestSellers',
       icon:BestSellersIcon,
     },
     {
       label: 'Personalize Gifts',
-      to: '/relations',
+      to: '/PersonalizeGifts',
       icon:PersonalizeGiftsIcon,
     },
     {

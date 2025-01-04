@@ -9,20 +9,22 @@ import Order from '../../../../Assets/Order.png';
 import Menu from '../../../../Assets/Menu.png';
 import Search from '../../../../Assets/Search.png';
 import Logo from '../../../../Assets/Logo.png';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Define dropdown menu items
 const dropdownMenuItems = [
-  { label: 'Profile', to: '/profile', icon: Profile },
-  { label: 'Orders', to: '/orders', icon: Order },
-  { label: 'Cart', to: '/cart', icon: Cart },
-  { label: 'Wishlist', to: '/wishlist', icon: Wishlist },
-  { label: 'Birthday', to: '/birthday', icon: null },
-  { label: 'Flowers', to: '/flowers', icon: null },
-  { label: 'Relations', to: '/relations', icon: null },
-  { label: 'Cakes', to: '/cakes', icon: null },
-  { label: 'Occasions', to: '/occasions', icon: null },
-  { label: 'Plants', to: '/plants', icon: null },
-  { label: 'Themes', to: '/themes', icon: null },
+  { label: 'Profile', to: '/Profile', icon: Profile },
+  { label: 'Orders', to: '/Orders', icon: Order },
+  { label: 'Cart', to: '/Cart', icon: Cart },
+  { label: 'Wishlist', to: '/Wishlist', icon: Wishlist },
+  { label: 'Birthday', to: '/Birthday', icon: null },
+  { label: 'Flowers', to: '/Flowers', icon: null },
+  { label: 'Relations', to: '/Relations', icon: null },
+  { label: 'Cakes', to: '/Cakes', icon: null },
+  { label: 'Occasions', to: '/Occasions', icon: null },
+  { label: 'Plants', to: '/Plants', icon: null },
+  { label: 'Themes', to: '/Themes', icon: null },
 ];
 
 const Nav = () => {
@@ -61,6 +63,18 @@ const Nav = () => {
     </ul>
   );
 
+
+  const copyToClipboard = (text:any) => {
+    navigator.clipboard.writeText(text).then(() => {
+      toast('Phone number copied to clipboard!');
+    }).catch((error) => {
+      console.error('Failed to copy text: ', error);
+    });
+  };
+
+  const openEmailClient = (email:any) => {
+    window.location.href = `mailto:${email}`;
+  };
   return (
     <Fragment>
       {isMenuOpen && <div className="dropdown-overlay" onClick={toggleMenu}></div>} {/* Black background overlay */}
@@ -72,7 +86,10 @@ const Nav = () => {
             <p>On-time Delivery</p>
           </div>
           <div className="right col">
-            <p>
+          <p
+        onDoubleClick={() => copyToClipboard('+91 90250 84185')}
+        style={{ cursor: 'pointer' }} // Add a pointer cursor to indicate interactivity
+      >
               <img
                 src={Phone_Icon}
                 alt="Phone Icon"
@@ -81,7 +98,10 @@ const Nav = () => {
               />
               +91 90250 84185
             </p>
-            <p>
+            <p
+        onDoubleClick={() => openEmailClient('infoteamptf@gmail.com')}
+        style={{ cursor: 'pointer' }} // Add a pointer cursor to indicate interactivity
+      >
               <img
                 src={Email_Icon}
                 alt="Email Icon"
@@ -94,7 +114,9 @@ const Nav = () => {
         </div>
         <div className="header-bottom">
           <div className="brand-logo">
+            <a href="/">
             <img src={Logo} alt="Fuescart logo" className="fuscart-logo" />
+            </a>
           </div>
           <div className="bottom-right">
             {/* Search Bar Container */}
