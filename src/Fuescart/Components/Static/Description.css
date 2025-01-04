@@ -1,0 +1,12 @@
+.Description{
+    background-color: var(--secondary-color);
+    font-family: var(--righteous-font);
+    font-size: var(--font-16);
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

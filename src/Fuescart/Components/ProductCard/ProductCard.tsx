@@ -72,7 +72,7 @@ const ProductCard: React.FC = () => {
     <div className="product-card">
       <div className="product-card-top">
         <div className="product-card-title">New Arrivals</div>
-        <a href="/"className="product-card-viewall">View All</a>
+        <Link to="/NewArrivals"className="product-card-viewall">View All</Link>
       </div>
       <div
         className="product-card-main"

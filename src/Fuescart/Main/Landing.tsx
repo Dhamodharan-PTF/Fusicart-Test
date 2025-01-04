@@ -5,6 +5,8 @@ import ProductCard from '../Components/ProductCard/ProductCard'
 import TopChoices from './TopChoices/TopChoices'
 import Categories from './Categories/Categories'
 import NewsLetter from '../Components/NewsLetter/NewsLetter'
+import TopChoices2 from './TopChoices/TopChoices2'
+import Description from '../Components/Static/Description'
 
 const Landing:React.FC = () => {
   return (
@@ -13,6 +15,8 @@ const Landing:React.FC = () => {
       <SpecialNav />
       <ProductCard />
       <TopChoices />
+      <TopChoices2 />
+      <Description />
       <Categories />
       <NewsLetter />
     </Fragment> 
