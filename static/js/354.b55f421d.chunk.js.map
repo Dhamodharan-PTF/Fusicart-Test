@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/354.b55f421d.chunk.js","mappings":"sKAEA,MAMA,EANiBA,KAEbC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,Y","sources":["Fuescart/Components/Account/Wishlist.tsx"],"sourcesContent":["import React from 'react'\n\nconst Wishlist = () => {\n  return (\n    <div>Wishlist</div>\n  )\n}\n\nexport default Wishlist"],"names":["Wishlist","_jsx","children"],"sourceRoot":""}

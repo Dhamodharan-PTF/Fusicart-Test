@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/993.3388d289.chunk.js","mappings":"sKAEA,MAMA,EANcA,KAEVC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,S","sources":["Fuescart/Main/SpecialCategories/Deals.tsx"],"sourcesContent":["import React from 'react'\n\nconst Deals = () => {\n  return (\n    <div>Deals</div>\n  )\n}\n\nexport default Deals"],"names":["Deals","_jsx","children"],"sourceRoot":""}

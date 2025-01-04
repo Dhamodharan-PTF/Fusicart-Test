@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/735.3a53cf23.chunk.js","mappings":"sKAEA,MAMA,EANgBA,KAEZC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,W","sources":["Fuescart/Main/Search_Files/Flowers.tsx"],"sourcesContent":["import React from 'react'\n\nconst Flowers = () => {\n  return (\n    <div>Flowers</div>\n  )\n}\n\nexport default Flowers"],"names":["Flowers","_jsx","children"],"sourceRoot":""}

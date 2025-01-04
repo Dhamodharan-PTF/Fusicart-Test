@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/540.0b06b83f.chunk.js","mappings":"sKAEA,MAMA,EANkBA,KAEdC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,a","sources":["Fuescart/Main/Search_Files/Relations.tsx"],"sourcesContent":["import React from 'react'\n\nconst Relations = () => {\n  return (\n    <div>Relations</div>\n  )\n}\n\nexport default Relations"],"names":["Relations","_jsx","children"],"sourceRoot":""}

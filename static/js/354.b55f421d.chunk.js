@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfuscart_frontend=self.webpackChunkfuscart_frontend||[]).push([[354],{6354:(s,e,t)=>{t.r(e),t.d(e,{default:()=>r});t(5043);var n=t(579);const r=()=>(0,n.jsx)("div",{children:"Wishlist"})}}]);
+//# sourceMappingURL=354.b55f421d.chunk.js.map

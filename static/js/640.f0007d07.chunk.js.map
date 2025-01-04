@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/640.f0007d07.chunk.js","mappings":"sKAEA,MAMA,EANiBA,KAEbC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,Y","sources":["Fuescart/Main/Search_Files/Birthday.tsx"],"sourcesContent":["import React from 'react'\n\nconst Birthday = () => {\n  return (\n    <div>Birthday</div>\n  )\n}\n\nexport default Birthday"],"names":["Birthday","_jsx","children"],"sourceRoot":""}
